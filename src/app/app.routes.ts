@@ -3,7 +3,8 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    loadComponent: () =>
+      import('./pages/home/home.page').then((m) => m.HomePage),
   },
   {
     path: '',
@@ -12,14 +13,19 @@ export const routes: Routes = [
   },
   {
     path: 'children',
-    loadComponent: () => import('./pages/children/children.page').then( m => m.ChildrenPage)
+    loadComponent: () =>
+      import('./pages/children/children.page').then((m) => m.ChildrenPage),
   },
   {
     path: 'child/:id',
-    loadComponent: () => import('./pages/child-detail/child-detail.page').then( m => m.ChildDetailPage)
+    loadComponent: () =>
+      import('./pages/child-detail/child-detail.page').then(
+        (m) => m.ChildDetailPage,
+      ),
   },
   {
     path: 'campaigns',
-    loadComponent: () => import('./pages/campaigns/campaigns.page').then( m => m.CampaignsPage)
+    loadComponent: () =>
+      import('./pages/campaigns/campaigns.page').then((m) => m.CampaignsPage),
   },
 ];

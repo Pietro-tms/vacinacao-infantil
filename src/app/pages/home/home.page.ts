@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ChildService } from '../services/child.service';
-import { Child } from '../models/child';
-import { Campaign } from '../models/campaign';
-import { Vaccine } from '../models/vaccine';
-import { CampaignService } from '../services/campaing.service';
-import { VaccineService } from '../services/vaccine.service';
+import { ChildService } from '../../services/child.service';
+import { Child } from '../../models/child';
+import { Campaign } from '../../models/campaign';
+import { Vaccine } from '../../models/vaccine';
+import { CampaignService } from '../../services/campaing.service';
+import { VaccineService } from '../../services/vaccine.service';
 import { RouterLink } from '@angular/router';
 import {
   IonHeader,
@@ -25,7 +25,7 @@ import {
   arrowBack,
   warning,
   checkmarkCircle,
-  alertCircle
+  alertCircle,
 } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
@@ -36,10 +36,8 @@ addIcons({
   arrowBack,
   warning,
   checkmarkCircle,
-  alertCircle
+  alertCircle,
 });
-
-
 
 @Component({
   selector: 'app-home',
@@ -56,7 +54,7 @@ addIcons({
     IonCardContent,
     IonButton,
     RouterLink,
-    IonIcon
+    IonIcon,
   ],
 })
 export class HomePage {
@@ -64,10 +62,13 @@ export class HomePage {
   campaigns: Campaign[] = [];
   vaccines: Vaccine[] = [];
 
-  constructor(private childService: ChildService, private campaignService: CampaignService, private vaccineService: VaccineService) {
+  constructor(
+    private childService: ChildService,
+    private campaignService: CampaignService,
+    private vaccineService: VaccineService,
+  ) {
     this.children = this.childService.getChildren();
     this.campaigns = this.campaignService.getActiveCampaigns();
     this.vaccines = this.vaccineService.getVaccines();
-
   }
 }
