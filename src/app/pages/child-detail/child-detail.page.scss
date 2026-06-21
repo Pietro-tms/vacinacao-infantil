@@ -1,0 +1,27 @@
+.history-card {
+  margin-top: 20px;
+}
+
+.history-card ion-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ion-item {
+  --padding-start: 0;
+}
+
+ion-label h2 {
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+ion-icon {
+  font-size: 1.5rem;
+}
+
+p {
+    display: flex;
+    align-items: center;
+}

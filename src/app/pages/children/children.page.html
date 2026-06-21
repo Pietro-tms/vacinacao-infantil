@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" color="primary" routerLink="/home">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>Crianças</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card
+    *ngFor="let child of children"
+    class="child-card"
+    [routerLink]="['/child', child.id]"
+  >
+    <ion-card-content class="child-content">
+      <ion-avatar>
+        <img
+          [src]="'https://api.dicebear.com/9.x/adventurer/svg?seed=' + child.name"
+          [alt]="child.name"
+        />
+      </ion-avatar>
+
+      <div class="child-info">
+        <div class="child-header">
+          <ion-card-title> {{ child.name }} </ion-card-title>
+
+          <ion-badge [color]="statusColor(child)">
+            {{ statusText(child) }}
+          </ion-badge>
+        </div>
+
+        <div class="child-details">
+          <div class="detail-item">
+            <ion-icon name="calendar-outline" color="primary"> </ion-icon>
+
+            <span>{{ child.age }} anos</span>
+          </div>
+
+          <div class="detail-item data-nascimento">
+            <ion-icon name="gift-outline" color="secondary"> </ion-icon>
+
+            <span>{{ child.birthDate }}</span>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

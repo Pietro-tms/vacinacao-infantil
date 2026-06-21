@@ -1,0 +1,99 @@
+ion-content {
+  --background: #fdfbf7;
+}
+
+.home-card {
+  margin: 16px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  box-shadow: 0 4px 12px rgba(71, 60, 51, 0.08);
+}
+
+.home-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(71, 60, 51, 0.12);
+}
+
+.card-content {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.card-icon {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.card-icon ion-icon {
+  font-size: 2rem;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-info h2 {
+  margin: 0;
+
+  color: var(--ion-color-dark);
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+}
+
+.card-info p {
+  margin-top: 6px;
+
+  color: #666;
+}
+
+.warning-card {
+  border-left: 6px solid #FDA769;
+}
+
+.campaign-card {
+  border-left: 6px solid #FEC868;
+}
+
+.children-card {
+  border-left: 6px solid #ABC270;
+}
+
+@media (max-width: 600px) {
+
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-icon ion-icon {
+    font-size: 1.6rem;
+  }
+}

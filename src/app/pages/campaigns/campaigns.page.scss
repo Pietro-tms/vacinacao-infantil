@@ -1,0 +1,45 @@
+ion-icon {
+    font-size: 1.5rem;
+}
+
+.campaign-card {
+  border-radius: 20px;
+
+  margin-bottom: 16px;
+
+  border-left: 6px solid var(--ion-color-primary);
+
+  box-shadow: 0 4px 12px rgba(71, 60, 51, 0.08);
+
+  transition: all 0.2s ease;
+}
+
+.campaign-title-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.campaign-title-row ion-icon {
+  font-size: 1.5rem;
+}
+
+ion-card-title {
+  color: var(--ion-color-dark);
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+}
+
+.campaign-description {
+  margin: 0;
+
+  line-height: 1.6;
+
+  color: #666;
+
+  font-size: 0.95rem;
+}

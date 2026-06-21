@@ -1,0 +1,161 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+
+
+
+body {
+  color: #473C33;
+  background: #fffdf8;
+  font-family: Inter, Roboto, sans-serif;
+}
+
+ion-content {
+  --background: #fffdf8;
+  --color: #473C33;
+}
+
+
+ion-toolbar {
+  --background: #ABC270;
+  --color: white;
+}
+
+ion-title {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+
+
+ion-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+ion-card-title {
+  color: #473C33;
+  font-weight: 700;
+}
+
+ion-card-content {
+  color: #473C33;
+}
+
+ion-item {
+  --background: white;
+  --color: #473C33;
+}
+
+
+
+ion-button {
+  --border-radius: 12px;
+  font-weight: 600;
+}
+
+
+
+ion-badge {
+  font-weight: 600;
+  padding: 8px;
+}
+
+.status-success {
+  background: #ABC270;
+  color: white;
+}
+
+.status-warning {
+  background: #FEC868;
+  color: #473C33;
+}
+
+.status-danger {
+  background: #FDA769;
+  color: #473C33;
+}
+
+
+.dashboard-card {
+  text-align: center;
+}
+
+.dashboard-card .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #473C33;
+}
+
+.dashboard-card .label {
+  color: #6d6259;
+}
+
+.child-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #ABC270;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.progress-container {
+  width: 100%;
+  height: 12px;
+  background: #ece7df;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #c27070;
+  border-radius: 999px;
+}
+
+
+
+
+

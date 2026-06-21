@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" color="dark" [routerLink]="['/children']">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title> {{ child?.name }} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>Situação</ion-card-title>
+
+      <br />
+
+      <p>
+        <ion-icon name="checkmark-circle" color="success" size="medium"></ion-icon>
+        Aplicadas: {{ getAppliedCount() }}
+      </p>
+
+      <p>
+        <ion-icon name="alert-circle" color="warning"></ion-icon>
+        Pendentes: {{ getPendingCount() }}
+      </p>
+
+      <p>
+        <ion-icon name="warning" color="danger"></ion-icon>
+        Atrasadas: {{ getLateCount() }}
+      </p>
+
+      <br />
+      <ion-card-title>Progresso de Vacinação do {{ child?.name }}</ion-card-title>
+      <p>{{getAppliedCount()}} de {{vaccineRecords.length}} vacinas aplicadas</p>
+      <br />
+
+
+      <ion-progress-bar [value]="getVaccinationProgress() / 100">
+      </ion-progress-bar>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Histórico Vacinal -->
+
+  <ion-card class="history-card">
+    <ion-card-header>
+      <ion-card-title>
+        <ion-icon name="medical"></ion-icon>
+
+        Histórico Vacinal
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item *ngFor="let vaccine of vaccineRecords" lines="none">
+        <ion-label>
+          <h2>{{ vaccine.vaccineName }}</h2>
+
+          <p>Data prevista: {{ vaccine.dueDate }}</p>
+
+          <p *ngIf="vaccine.applicationDate">
+            Aplicada em: {{ vaccine.applicationDate }}
+          </p>
+        </ion-label>
+
+        <ion-badge
+          slot="end"
+          [color]="
+            vaccine.status === 'APLICADA'
+              ? 'success'
+              : vaccine.status === 'PENDENTE'
+              ? 'warning'
+              : vaccine.status === 'ATRASADA'
+              ? 'danger'
+              : 'light'
+          "
+        >
+          {{ vaccine.status }}
+        </ion-badge>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

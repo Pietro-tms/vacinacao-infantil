@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>💉 VacinaKids</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card
+    class="home-card warning-card"
+    button
+    [routerLink]="['/pending-vaccines']"
+  >
+    <ion-card-content>
+      <div class="card-content">
+        <div class="card-icon">
+          <ion-icon name="warning" color="warning"> </ion-icon>
+        </div>
+
+        <div class="card-info">
+          <h2>Vacinas em atraso</h2>
+
+          <p>3 vacinas atrasadas</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card
+    class="home-card campaign-card"
+    button
+    [routerLink]="['/campaigns']"
+  >
+    <ion-card-content>
+      <div class="card-content">
+        <div class="card-icon">
+          <ion-icon name="megaphone" color="primary"> </ion-icon>
+        </div>
+
+        <div class="card-info">
+          <h2>Campanhas</h2>
+
+          <p>{{ campaigns.length }} campanhas ativas</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="home-card children-card" button [routerLink]="['/children']">
+    <ion-card-content>
+      <div class="card-content">
+        <div class="card-icon">
+          <ion-icon name="people" color="secondary"> </ion-icon>
+        </div>
+
+        <div class="card-info">
+          <h2>Crianças</h2>
+
+          <p>Ver carteira vacinal</p>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
