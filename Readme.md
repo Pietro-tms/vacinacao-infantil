@@ -115,28 +115,6 @@ A aplicação foi desenvolvida para funcionar adequadamente em:
 
 ---
 
-## 🚀 Como Executar o Projeto
-
-### Instalar dependências
-
-```bash
-npm install
-```
-
-### Executar em ambiente de desenvolvimento
-
-```bash
-ionic serve
-```
-
-### Gerar build de produção
-
-```bash
-ionic build
-```
-
----
-
 ## 📂 Estrutura do Projeto
 
 ```text
